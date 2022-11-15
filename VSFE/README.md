@@ -34,14 +34,15 @@ LIBSO=1
 --yaw_poses 0
 ```
 
+Modify Rotate-and-Render/test_multipose.py
 
-	Modify Rotate-and-Render/test_multipose.py
 ```
 line102: opt.gpu_ids = list(range(0, ngpus - opt.render_thread)) to opt.gpu_ids = [0]
 line109: opt.gpu_ids[-1] to opt.gpu_ids[0]
 line128: opt.gpu_ids[-1] to opt.gpu_ids[0]
 ```
-	Modify Rotate-and-Render/3ddfa/inference.py
+
+Modify Rotate-and-Render/3ddfa/inference.py
     
 ```
 line82: pts_2d_68 = preds[0][0] to pts_2d_68 = preds[0]
