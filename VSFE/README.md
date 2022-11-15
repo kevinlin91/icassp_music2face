@@ -24,9 +24,11 @@
 2. Put the repository under VSFE folder and follow the instructions on Rotated-and-Render to build the rotation model
 
 3. Modify Rotate-and-Render/experiments/v100_test.sh
+        '''
         --gpu_ids 0
         --nThreads 1
         --yaw_poses 0
+        '''
 	Modify Rotate-and-Render/test_multipose.py
         line102: opt.gpu_ids = list(range(0, ngpus - opt.render_thread)) to opt.gpu_ids = [0]
         line109: opt.gpu_ids[-1] to opt.gpu_ids[0]
