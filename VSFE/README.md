@@ -4,8 +4,11 @@
 1. Clone the YOLOv4 model from https://github.com/AlexeyAB/darknet
 
 2. Modify two arguments in darknet/Makefile:
-		OPENCV=1
-		LIBSO=1
+
+```
+OPENCV=1
+LIBSO=1
+```        
 
 3. Complie (make) the darknet model to obtain "libdarknet.so"
 
@@ -31,12 +34,18 @@
 --yaw_poses 0
 ```
 
+
 	Modify Rotate-and-Render/test_multipose.py
-        line102: opt.gpu_ids = list(range(0, ngpus - opt.render_thread)) to opt.gpu_ids = [0]
-        line109: opt.gpu_ids[-1] to opt.gpu_ids[0]
-        line128: opt.gpu_ids[-1] to opt.gpu_ids[0]
+```
+line102: opt.gpu_ids = list(range(0, ngpus - opt.render_thread)) to opt.gpu_ids = [0]
+line109: opt.gpu_ids[-1] to opt.gpu_ids[0]
+line128: opt.gpu_ids[-1] to opt.gpu_ids[0]
+```
 	Modify Rotate-and-Render/3ddfa/inference.py
-        line82: pts_2d_68 = preds[0][0] to pts_2d_68 = preds[0]
+    
+```
+line82: pts_2d_68 = preds[0][0] to pts_2d_68 = preds[0]
+```
 		
 ### Start building the dataset
 1. Run violin_expression_ytdl.py to download the videos from YouTube
