@@ -60,16 +60,16 @@ line82: pts_2d_68 = preds[0][0] to pts_2d_68 = preds[0]
 		python violin_expression_extract.py
 	The results will be saved in VSFE/vsfe_dataset
 	
-	Original audio &raquo; VSFE/vsfe_dataset/original_audio
-	Original frames &raquo; VSFE/vsfe_dataset/original_frames
-	Extracted audio &raquo; VSFE/vsfe_dataset/filtered_audio
-	Extracted frames &raquo; VSFE/vsfe_dataset/filtered_frames
-	Extracted landmark &raquo; VSFE/vsfe_dataset/filtered_landmarks
+- Original audio &raquo; VSFE/vsfe_dataset/original_audio
+- Original frames &raquo; VSFE/vsfe_dataset/original_frames
+- Extracted audio &raquo; VSFE/vsfe_dataset/filtered_audio
+- Extracted frames &raquo; VSFE/vsfe_dataset/filtered_frames
+- Extracted landmark &raquo; VSFE/vsfe_dataset/filtered_landmarks
 	
 3. Run run_rotated.sh to obtain the rotated face images
 		run $sh run_rotate.sh
-	The rotated face images will be saved in VSFE/vsfe_dataset/rotate_frames
-	The filtered images will be saved in VSFE/vsfe_dataset/rotate_filtered_frames
+- The rotated face images will be saved in VSFE/vsfe_dataset/rotate_frames
+- The filtered images will be saved in VSFE/vsfe_dataset/rotate_filtered_frames
 	
 4. Run sequence_filter.py to obtain the index of the sequence data
 		python sequence_filter.py
