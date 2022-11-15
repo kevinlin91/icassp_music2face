@@ -1,6 +1,6 @@
 # Violin Soundtrack and Facial Expression dataset
 
-### Preparing YOLOv4 model for violin detection
+## Preparing YOLOv4 model for violin detection
 1. Clone the YOLOv4 model from https://github.com/AlexeyAB/darknet
 
 2. Modify two arguments in darknet/Makefile:
@@ -16,12 +16,12 @@ LIBSO=1
 
 5. Download the pre-trained YOLOv4 model from https://drive.google.com/file/d/1fmx5PsuFPTk8nzX-WDqJxnWrqEaRAIWf/view?usp=sharing, put the files under VSFE/cfg folder
 
-### Preparing face detection model
+## Preparing face detection model
 1. Install python package: DLib
 
 2. Put shape_predictor_68_face_landmarks.dat (http://dlib.net/files/shape_predictor_68_face_landmarks.dat.bz2) under VSFE folder
 
-### Preparing face rotation model
+## Preparing face rotation model
 1. Clone the Rotate-and-Render from https://github.com/Hangz-nju-cuhk/Rotate-and-Render
 
 2. Put the repository under VSFE folder and follow the instructions on Rotated-and-Render to build the rotation model
@@ -48,7 +48,7 @@ Modify Rotate-and-Render/3ddfa/inference.py
 line82: pts_2d_68 = preds[0][0] to pts_2d_68 = preds[0]
 ```
 		
-### Start building the dataset
+## Start building the dataset
 1. Run violin_expression_ytdl.py to download the videos from YouTube
 		python violin_expression_ytdl.py
 	The results will be saved in VSFE/violin_expression_youtube
