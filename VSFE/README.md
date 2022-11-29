@@ -59,9 +59,10 @@ The results will be saved in VSFE/violin_expression_youtube
 - Video &raquo; VSFE/violin_expression_youtube/video
 	
 2. Run violin_expression_extract.py to extract/filter frames and audio for the YouTube videos
-		python violin_expression_extract.py
-	The results will be saved in VSFE/vsfe_dataset
-	
+```
+python violin_expression_extract.py
+```
+The results will be saved in VSFE/vsfe_dataset	
 - Original audio &raquo; VSFE/vsfe_dataset/original_audio
 - Original frames &raquo; VSFE/vsfe_dataset/original_frames
 - Extracted audio &raquo; VSFE/vsfe_dataset/filtered_audio
@@ -69,12 +70,16 @@ The results will be saved in VSFE/violin_expression_youtube
 - Extracted landmark &raquo; VSFE/vsfe_dataset/filtered_landmarks
 	
 3. Run run_rotated.sh to obtain the rotated face images
-		run $sh run_rotate.sh
+```
+sh run_rotate.sh
+```
 - The rotated face images will be saved in VSFE/vsfe_dataset/rotate_frames
 - The filtered images will be saved in VSFE/vsfe_dataset/rotate_filtered_frames
 	
 4. Run sequence_filter.py to obtain the index of the sequence data
-		python sequence_filter.py
-	This python file will generate two outputs (sequence_list_more_than_17.pkl and sequence_list_range16.pkl)
+```
+python sequence_filter.py
+```
+This python file will generate two outputs (sequence_list_more_than_17.pkl and sequence_list_range16.pkl)
 - sequence_list_more_than_17.pkl: This file contains sequences which are longer than 17
 - sequence_list_range16.pkl: Every sequence in this file is fix to 16. The seuquences here are extracted from the sequences in sequence_list_more_than_17.pkl
