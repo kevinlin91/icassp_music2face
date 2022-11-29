@@ -76,7 +76,7 @@ sh run_rotate.sh
 - The rotated face images will be saved in VSFE/vsfe_dataset/rotate_frames
 - The filtered images will be saved in VSFE/vsfe_dataset/rotate_filtered_frames
 	
-4. Run sequence_filter.py to obtain the index of the sequence data
+4. Run sequence_filter.py to obtain the index(path) of the sequence data
 ```
 python sequence_filter.py
 ```
